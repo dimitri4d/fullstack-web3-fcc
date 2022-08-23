@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "test": "yarn hardhat test"
+  },
   "devDependencies": {
     "@chainlink/contracts": "^0.4.2",
     "@ethersproject/abi": "^5.4.7",
