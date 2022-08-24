@@ -1,0 +1,1 @@
+Minimalistic vanilla js frontend
