@@ -53,7 +53,7 @@ contract Raffle is VRFConsumerBaseV2, KeeperCompatibleInterface {
     uint256 private immutable i_interval;
 
     // events
-    event RaffeEnter(address indexed player);
+    event RaffleEnter(address indexed player);
     event RequestedRaffleWinner(uint256 indexed requestId);
     event WinnerPicked(address indexed winner);
 
@@ -95,7 +95,7 @@ contract Raffle is VRFConsumerBaseV2, KeeperCompatibleInterface {
 
         // emit an event when update a dynamic array or mapping
         // name events with the function name reversed
-        emit RaffeEnter(msg.sender);
+        emit RaffleEnter(msg.sender);
     }
 
     /**
@@ -217,5 +217,9 @@ contract Raffle is VRFConsumerBaseV2, KeeperCompatibleInterface {
 
     function getRequestConfirmations() public pure returns (uint256) {
         return REQUEST_CONFIRMATIONS;
+    }
+
+    function getInterval() public view returns (uint256) {
+        return i_interval;
     }
 }
